@@ -29,3 +29,22 @@ Types of learning
     give it a goal & system of reward and punishment. if it reaches a goal, give it a rewards; if it fails, punish
     alogrithm will figure out what are the rules of the game, what are the action he can take and what is the best strategy
     learns from its own behavior and trains itself. Policy?
+
+sigmoid function
+	Sigmoid squashing function => (-1,1); S(t) = 1/(1+e^-t)
+	this insures that neurons value never gets outside of the range of +1 to -1, which is helpful for keeping computation in neuralnet bounded and stable
+ReLU - Rectified linear units
+	Have very nice stability properties for neuralnet
+
+		rectifier => y€<0,infinity); y = max(0,x)
+		if value is positive keep it, otherwise zero
+
+		softplus => y€(0,infitity); y = ln(1+e^x)
+		derivative of softplus is logistic function (sigmoid): f'(x)=e^x/(e^x+1)=1/(1+e^-x)
+		smoothens out
+
+Grandien descent
+	Calculating the slope of error function by calculating the slope (slope = change in error / change in weight= de/dw) - calculus 
+
+Chaining
+	

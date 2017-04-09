@@ -1,1 +1,14 @@
 Book: The master algorithm
+
+Neural-nets:
+	Bias neurons
+	Dropout (useful training tool)
+	Backpropagation details: Andrej Karpathy's Stanford CS231 lecture <a href="https://www.youtube.com/watch?v=i94OvYb6noo">on YouTube</a>
+	Backpropagation gotchas: Andrej Karpathys article <a href="https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b#.um2e4ce1b">"Yes you should understand backdrop"</a>
+	Tips and tricks: Nikolas Markous article <a href="https://nmarkou.blogspot.com.cy/2017/02/the-black-magic-of-deep-learning-tips.html">"The Black Magic of Deep Learning"</a>
+
+Great youtube tuts:
+	<a href="https://www.youtube.com/playlist?list=PLVZqlMpoM6kbaeySxhdtgQPFEC5nV7Faa">
+	Playlist full of 20-30min explanation videos about neural-nets, deep learning, data science, bayes theorem</a>
+	
+	 
