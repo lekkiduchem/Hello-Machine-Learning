@@ -44,7 +44,6 @@ ReLU - Rectified linear units
 		smoothens out
 
 Grandien descent
-	Calculating the slope of error function by calculating the slope (slope = change in error / change in weight= de/dw) - calculus 
+	Calculating the slope of error function by calculating the slope (slope = change in error / change in weight= de/dw) - calculus
 
 Chaining
-	
