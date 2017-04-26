@@ -1,6 +1,7 @@
 features - columns
 policy - course of action
 the flooris lava - reachin solution asap
+Online learning - training algorithm based on real life cases
 
 linear algebra
   allows you to take a bunch of equasions and stack them on top of each other and then solve for all of them togather.
@@ -11,7 +12,6 @@ ML is 3 steps:
   Infere/Predict - shot in the dark
   Error/Loss - vector of number telling how far off was the algorithm prediction from the actual value
   Train/Learn - update coefficience or weights
-  Online learning - training algorithm based on real life cases
 
 Types of learning
   Supervised learning
@@ -28,7 +28,7 @@ Types of learning
     taking actions (robot movement, playing games)
     give it a goal & system of reward and punishment. if it reaches a goal, give it a rewards; if it fails, punish
     alogrithm will figure out what are the rules of the game, what are the action he can take and what is the best strategy
-    learns from its own behavior and trains itself. Policy?
+    learns from its own behavior and trains itself. Policy(course of action)
 
 sigmoid function
 	Sigmoid squashing function => (-1,1); S(t) = 1/(1+e^-t)
@@ -47,7 +47,7 @@ Grandien descent
 	Calculating the slope of error function by calculating the slope (slope = change in error / change in weight= de/dw) - calculus
 
 Chaining
-<<<<<<< HEAD
+
 =======
 
 
@@ -149,4 +149,3 @@ Gradient Descent Intuition
 
     θ1:=θ1−α∗0
     ~/gradient_descent_3.png
->>>>>>> 624cbcc9082724db5a4ada8970084dbb22cc3537
