@@ -1,27 +1,48 @@
-x = [5,5,5;0,0,0]; y = [2,1;2,2;2,3];
+d = 1; % d - display; toggle to display results of multiplication
 
-% SCALARS
-printf(" x (%d,%d)  * y (%d,%d)  = (%d,%d) : ", size(x ), size(y ), size(x   * y ));    x   * y
-printf(" x'(%d,%d) * y (%d,%d) : UNDEFINED\n",  size(x'), size(y ));                    x'  * y
-printf(" x'(%d,%d)  * y'(%d,%d)  = (%d,%d) : ", size(x'), size(y'), size(x   * y'));    x   * y'
-printf(" x (%d,%d) * y'(%d,%d) : UNDEFINED\n",  size(x ), size(y'));                    x'  * y'
+x = [ 1,  1,  1 ;
+      1,  1,  4 ]
 
-printf(" x (%d,%d) .* y (%d,%d)  = (%d,%d) : ", size(x ), size(y ), size(x  .* y ));    x  .* y
-printf(" x'(%d,%d) .* y (%d,%d)  = (%d,%d) : ", size(x'), size(y ), size(x' .* y ));    x' .* y
-printf(" x (%d,%d) .* y'(%d,%d)  = (%d,%d) : ", size(x ), size(y'), size(x  .* y'));    x  .* y'
-printf(" x'(%d,%d) .* y'(%d,%d)  = (%d,%d) : ", size(x'), size(y'), size(x' .* y'));    x' .* y'
+y = [ 2, 1 ;
+      2, 2 ;
+      2, 3 ]
 
-printf(" y (%d,%d)  * x (%d,%d)  = (%d,%d) : ", size(y ), size(x ), size(y   * x ));    y   * x
-printf(" y'(%d,%d) * x (%d,%d) : UNDEFINED\n",  size(y'), size(x ));                    y'  * x
-printf(" y (%d,%d) * x'(%d,%d) : UNDEFINED\n",  size(y ), size(x'));                    y   * x'
-printf(" y'(%d,%d)  * x'(%d,%d)  = (%d,%d) : ", size(y'), size(x'), size(y'  * x'));    y'  * x'
+printf(" x (%d,%d)  * y (%d,%d)  = (%d,%d) | ", size(x ), size(y ), size(x  * y )), ifelse(d, x  * y , "")
+printf(" y (%d,%d)  * x (%d,%d)  = (%d,%d) | ", size(y ), size(x ), size(y  * x )), ifelse(d, y  * x , "")
+printf(" x'(%d,%d)  * y'(%d,%d)  = (%d,%d) | ", size(x'), size(y'), size(x' * y')), ifelse(d, x' * y', "")
+printf(" y'(%d,%d)  * x'(%d,%d)  = (%d,%d) | ", size(y'), size(x'), size(y' * x')), ifelse(d, y' * x', "")
+  % x (2,3)  * y (3,2) = (2,2)
+  % y (3,2)  * x (2,3) = (3,3)
+  % x'(3,2)  * y'(2,3) = (3,3)
+  % y'(2,3)  * x'(3,2) = (2,2)
 
-printf(" y (%d,%d) .* x (%d,%d)  = (%d,%d) : ", size(y ), size(x ), size(y  .* x ));    y  .* x
-printf(" y'(%d,%d) .* x (%d,%d)  = (%d,%d) : ", size(y'), size(x ), size(y' .* x ));    y' .* x
-printf(" y (%d,%d) .* x'(%d,%d)  = (%d,%d) : ", size(y ), size(x'), size(y  .* x'));    y  .* x'
-printf(" y'(%d,%d) .* x'(%d,%d)  = (%d,%d) : ", size(y'), size(x'), size(y' .* x'));    y' .* x'
+printf(" x'(%d,%d) .* y (%d,%d)  = (%d,%d) | ", size(x'), size(y ), size(x' .* y )), ifelse(d, x' .* y , "")
+printf(" x (%d,%d) .* y'(%d,%d)  = (%d,%d) | ", size(x ), size(y'), size(x  .* y')), ifelse(d, x  .* y', "")
+printf(" y'(%d,%d) .* x (%d,%d)  = (%d,%d) | ", size(y'), size(x ), size(y' .* x )), ifelse(d, y' .* x , "")
+printf(" y (%d,%d) .* x'(%d,%d)  = (%d,%d) | ", size(y ), size(x'), size(y  .* x')), ifelse(d, y  .* x', "")
+  % x'(3,2) .* y (3,2) = (3,2)
+  % x (2,3) .* y'(2,3) = (2,3)
+  % y'(2,3) .* x (2,3) = (2,3)
+  % y (3,2) .* x'(3,2) = (3,2)
 
-% 1x3 MATRICIES
-% 3x1 MATRICIES
-% 3x3 MATRICIES
 % UNDEFINED
+printf(" x (%d,%d)  * y'(%d,%d) : UNDEFINED\n", size(x ), size(y')); % x  * y'
+printf(" x'(%d,%d)  * y (%d,%d) : UNDEFINED\n", size(x'), size(y )); % x' * y
+printf(" y (%d,%d)  * x'(%d,%d) : UNDEFINED\n", size(y ), size(x')); % y  * x'
+printf(" y'(%d,%d)  * x (%d,%d) : UNDEFINED\n", size(y'), size(x )); % y' * x
+  % x (2,3)  * y'(2,3) : UNDEFINED
+  % x'(3,2)  * y (3,2) : UNDEFINED
+  % y (3,2)  * x'(3,2) : UNDEFINED
+  % y'(2,3)  * x (2,3) : UNDEFINED
+printf(" x (%d,%d) .* y (%d,%d) : UNDEFINED\n", size(x ), size(y )); % x  .* y
+printf(" y (%d,%d) .* x (%d,%d) : UNDEFINED\n", size(y ), size(x )); % y  .* x
+printf(" x'(%d,%d) .* y'(%d,%d) : UNDEFINED\n", size(x'), size(y')); % x' .* y'
+printf(" y'(%d,%d) .* x'(%d,%d) : UNDEFINED\n", size(y'), size(x')); % y' .* x'
+  % x (2,3) .* y (3,2) : UNDEFINED
+  % y (3,2) .* x (2,3) : UNDEFINED
+  % x'(3,2) .* y'(2,3) : UNDEFINED
+  % y'(2,3) .* x'(3,2) : UNDEFINED
+
+
+% * - matrix multiplication - operation is allowed only for matricies where first matrix have same amount of columns as second one has the rows. The result of multiplication [n x m] * [m x p] = [n x p]
+% .* - Element-by-element multiplication. If both operands are matrices, the number of rows and columns must both agree. [n x m] * [n x m] = [n x m]
