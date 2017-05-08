@@ -20,14 +20,35 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
-h = sigmoid(X*theta);
-J = sum(-y .* log(h) - (1-y) .* log(1-h)) / m;
-grad = (X'*(h - y)) / m;
-% alternative implementation:
-% J = ((-y)'*log(h)-(1-y)'*log(1-h))/m
+h    = sigmoid( X * theta );
+J    = (1/m) *  sum( -y .* log(h) - (1-y) .* log(1-h) );
+grad = (1/m) *  ( X' * (h-y) );
+
 
 
 
 % =============================================================
 
 end
+
+
+% examples of different implementations from github
+% Cost function J
+% J = (1/m) *  sum(-y .* log(h) - (1-y) .* log(1-h))
+% J = (1/m) *     (-y' * log(h) - (1-y)' * log(1-h))
+%
+% Hypothesis function
+% h = sigmoid(X*theta);
+% h = sigmoid(theta' * X(i,:)');
+
+% Gradient
+% 1: grad = (1/m) * ((h - y)' * X);
+% 2:
+% for i=1:m,
+%   h = sigmoid(theta'*X(i,:)');
+%   temp = h - y(i);
+%   for j=1:n,
+%     grad(j) = grad(j) + temp * X(i,j);
+%   end;
+% end;
+% grad = grad/m;
