@@ -1,5 +1,2 @@
-
-
-
-What it does: ???
-contour(u, v, z, [0, 0], 'LineWidth', 2) % Notice you need to specify the range [0, 0]
+ex2/predict.m - how our sigmoid of our predictions is alligned with values from training data ??? 
+ex2/plotDecisionBoundary.m - What it does: contour(u, v, z, [0, 0], 'LineWidth', 2) % Notice you need to specify the range [0, 0]
