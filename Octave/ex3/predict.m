@@ -22,10 +22,24 @@ p = zeros(size(X, 1), 1);
 %
 
 
-% ps = sigmoid(X*all_theta');
-% [p_max, i_max]=max(ps, [], 2);
-% p = i_max;
+h1 = sigmoid([ones(m, 1) X] * Theta1');
+h2 = sigmoid([ones(m, 1) h1] * Theta2');
+[dummy, p] = max(h2, [], 2);
 
+% other implementations on github
+% a1 = [ones(m, 1) X];
+% z2 = a1*Theta1';
+% a2 = [ones(size(z2, 1), 1) sigmoid(z2)];
+% z3 = a2*Theta2';
+% a3 = sigmoid(z3);
+% [p_max, p] = max(a3, [], 2);
+
+% X = [ones(size(X,1),1) X];
+% a_2 = sigmoid(X * Theta1');
+% a_2 = [ones(size(a_2,1),1) a_2];
+% match = sigmoid(a_2 * Theta2');
+% [x, p] = max(match');
+% p = p';
 
 % =========================================================================
 

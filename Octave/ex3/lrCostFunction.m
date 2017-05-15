@@ -1,3 +1,4 @@
+
 function [J, grad] = lrCostFunction(theta, X, y, lambda)
 %LRCOSTFUNCTION Compute cost and gradient for logistic regression with
 %regularization
@@ -38,11 +39,8 @@ grad = zeros(size(theta));
 h    = sigmoid( X * theta );
 J    = (1/m) *  sum( -y .* log(h) - (1-y) .* log(1-h) ) +  (lambda/(2*m)) * sum( theta(2:end) .^ 2 );
 grad = (1/m) *  ( X' * (h-y) );
-
-% J = J + (lambda/(2*m)) * sum( theta(2:end) .^ 2 );
-%   grad(1) = 0 BUT WHY ???
+%   grad(1) = 0 BUT WHY it has to be zero???
 grad(2:end) = grad(2:end) + (lambda/m)*theta(2:end);
-
 
 % =============================================================
 
