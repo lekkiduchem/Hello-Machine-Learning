@@ -21,7 +21,7 @@
 <li>MNIST in TensorFlow</li>
 <li>Cat / Dog image classification</li>
 <li>imagenet classification</li>
-<li>face recognition app</li>
+<li>face recognition app in OpenCV</li>
 <li>GTA V self-driving car</li>
 <li>hardware implications: balancing a levitaiting magnet (raspberryPi + DIY magnetic platform)</li>
 </ol>
