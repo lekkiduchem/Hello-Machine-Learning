@@ -1,2 +1,4 @@
 **/token.mat
-eventNotes*
+.notes/
+.ipynb_checkpoints/
+.udemy/
